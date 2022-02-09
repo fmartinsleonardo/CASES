@@ -16,6 +16,7 @@ const Select = styled.select `
 const Header = () => {
   const [sorteios, setSorteios]=useState([])
   const [sortId, setSortId]=useState("mega-sena")
+  const [idConcurso, setIdConcurso]=useState(2359)
 
   useEffect(()=>{
     getLoterias()
@@ -33,6 +34,16 @@ const Header = () => {
     })
   };
 
+  const getConcursos = () => {
+    axios.get(`${BASE_URL}/concursos/${idConcurso}`)
+    .then(response => {
+      console.log(response.data);
+
+    }).catch(error => {
+      console.log(error.response.data);
+    })
+  };
+
 
 
     // const sorteiosLoteria = sorteios.map((sorteio) => {
@@ -44,10 +55,29 @@ const Header = () => {
     //   )
     // })
 
+  const selecionaSorteio = (event) => {
+    setSortId(event.target.value)
+  }
 
-    const selecionaSorteio = (event) => {
-      setSortId(event.target.value)
-    }
+    // const selecionaSorteio = (event) => {
+    //   setSortId(event.target.value)
+
+    //   if (sortId === "mega-sena"){
+    //     return setIdConcurso ===2359
+    //   } else if (sortId === "quina"){
+    //     return setIdConcurso ===5534
+    //   } else if (sortId === "lotofacil"){
+    //     return setIdConcurso ===2200
+    //   } else if (sortId === "lotomania"){
+    //     return setIdConcurso ===2167
+    //   } else if (sortId === "timemania"){
+    //     return setIdConcurso ===1622
+    //   } else if (sortId === "dia de sorte"){
+    //     return setIdConcurso ===440
+    //   }
+    // }
+
+    console.log(idConcurso);
 
     console.log(sortId);
 

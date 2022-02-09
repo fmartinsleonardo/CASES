@@ -10,12 +10,12 @@ const SorteioContainer = styled.div `
 
 const Sorteado = () => {
   // const [numerosSorteados, setNumerosSorteados]=useState([])
-  const [idConcurso, setIdConcurso]=useState(2359)
+  // const [idConcurso, setIdConcurso]=useState(2359)
   // const [idLoteria, setIdLoteria]=useState(1)
 
     useEffect(()=>{
     getIdConcurso();
-    getConcursos()
+    // getConcursos()
   },[])
 
   const getIdConcurso = () => {
@@ -31,25 +31,25 @@ const Sorteado = () => {
   // const selecionaIdConcurso = (event) => {
   //     setIdConcurso(event.target.value)
   //   }
-    console.log(idConcurso);
+    // console.log(idConcurso);
 
 
-  const getConcursos = () => {
-    axios.get(`${BASE_URL}/concursos/${idConcurso}`)
-    .then(response => {
-      console.log(response.data);
+  // const getConcursos = () => {
+  //   axios.get(`${BASE_URL}/concursos/${idConcurso}`)
+  //   .then(response => {
+  //     console.log(response.data);
 
-    }).catch(error => {
-      console.log(error.response.data);
-    })
-  };
+  //   }).catch(error => {
+  //     console.log(error.response.data);
+  //   })
+  // };
 
 
 
     return (
       <SorteioContainer>
         <h1>Concursos</h1>
-        <p>{idConcurso}</p>
+        {/* <p>{idConcurso}</p> */}
         {/* <p>{idConcursosLoteria}</p> */}
      </SorteioContainer>
     )
