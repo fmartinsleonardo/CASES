@@ -105,7 +105,9 @@ const Header = (props) => {
             <option>dia de sorte</option>
           </Select>
         </header>
+        <div>
         <Concursos>{sortId.toUpperCase()}</Concursos>
+        </div>
 
         <Footer>
           <p>Concurso</p>

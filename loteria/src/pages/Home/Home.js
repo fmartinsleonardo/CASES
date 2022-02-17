@@ -1,7 +1,7 @@
 import Sorteado from "../../components/Sorteado/Sorteado"
 import styled from "styled-components";
 import Concurso from "../../components/Concurso/Concurso";
-import Footer from "../../components/Footer/Footer";
+
 
 const HomeContainer = styled.div `
   display: flex;
