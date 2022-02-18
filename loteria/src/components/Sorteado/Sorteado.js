@@ -8,7 +8,7 @@ const SorteioContainer = styled.div `
   `
 
 const Numeros = styled.p `
-  background: white;
+  background: lightgray;
   padding: 16px;
   margin: 8px;
   border: 1px solid white;

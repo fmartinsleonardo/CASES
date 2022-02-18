@@ -91,7 +91,6 @@ const Header = (props) => {
 
     console.log(sortId);
 
-    // console.log(testeNumero);
     return (
     <div>
       <ContainerHeader>
