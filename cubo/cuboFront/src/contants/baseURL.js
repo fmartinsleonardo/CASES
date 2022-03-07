@@ -1,0 +1,1 @@
+export const baseURL = "https://cubo-backend.herokuapp.com"
